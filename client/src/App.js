@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Authors from './components/Authors'
+import NotFound from './components/NotFound'
 import axios from 'axios';
 import { Router, Link } from '@reach/router'
 import AuthorDetail from './components/AuthorDetail';
@@ -35,6 +36,7 @@ function App() {
     </div>
       <div className="container">
       <Router>
+        <NotFound default/>
         <Authors 
           errors={errors} setErrors={setErrors}
           allAuthors={allAuthors} setAllAuthors={setAllAuthors} 
